@@ -1,4 +1,4 @@
-# For random selection of player's.
+# Import random module For random selection of player's.
 import random
 
 # To display the board.
