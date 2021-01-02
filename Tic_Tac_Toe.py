@@ -1,9 +1,9 @@
-# Import random module For random selection of player's.
+# Import random module For random selection of player's
 import random
 
-# To display the board.
+# To display the board
 def display_board(board):
-    print('\n' * 100)  # To provide spacing.
+    print('\n' * 100)  # To provide spacing
 
     print('   |   |')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
@@ -20,7 +20,7 @@ def display_board(board):
     print("Player 1: " + player1_marker)
     print("Player 2: " + player2_marker)
 
-# To take player's input.
+# To take player's input
 def player_input():
     marker = ''
 
@@ -32,11 +32,11 @@ def player_input():
     else:
         return ('O', 'X')
 
-# To place marker.
+# To place marker
 def place_marker(board, marker, position):
     board[position] = marker
 
-# To check win or not.
+# To check win or not
 def win_check(board, mark):
     return ((board[7] == mark and board[8] == mark and board[9] == mark) or  # across the top
             (board[4] == mark and board[5] == mark and board[6] == mark) or  # across the middle
@@ -47,25 +47,25 @@ def win_check(board, mark):
             (board[7] == mark and board[5] == mark and board[3] == mark) or  # diagonal
             (board[9] == mark and board[5] == mark and board[1] == mark))  # diagonal
 
-# To choose player.
+# To choose player
 def choose_first():
     if random.randint(0, 1) == 0:
         return 'Player 2'
     else:
         return 'Player 1'
 
-# Function indicating whether a space on the board is freely available or not.
+# Function indicating whether a space on the board is freely available or not
 def space_check(board, position):
     return board[position] == ' '
 
-# Function that checks if the board is full.
+# Function that checks if the board is full
 def full_board_check(board):
     for i in range(1,10):
         if space_check(board, i):
             return False
     return True
 
-# Asks for a player's position and then use the function space_check to check if its a free position if it is then return the position for use.
+# Asks for a player's position and then use the function space_check to check if its a free position if it is then return the position for use
 def player_choice(board):
     position = 0
 
@@ -74,11 +74,11 @@ def player_choice(board):
 
     return position
 
-# Function that asks the player if they want to play again or not.
+# Function that asks the player if they want to play again or not
 def replay():
     return input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
 
-# main.
+# main
 if __name__ == '__main__':
     print('Welcome to Tic Tac Toe!')
 
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
         while game_on:
             if turn == 'Player 1':
-                # Player1's turn.
+                # Player1's turn
 
                 display_board(theBoard)
                 position = player_choice(theBoard)
@@ -118,7 +118,7 @@ if __name__ == '__main__':
                         turn = 'Player 2'
 
             else:
-                # Player2's turn.
+                # Player2's turn
 
                 display_board(theBoard)
                 position = player_choice(theBoard)
