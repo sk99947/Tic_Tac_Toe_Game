@@ -12,7 +12,7 @@ Working of game :-
         #Player 1 Turn
         
         
-        # Player2's turn.
+        # Player2's turn
             
             #pass
 
