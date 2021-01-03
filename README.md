@@ -4,13 +4,13 @@ A tic tac toe game to have fun !
 
 Working of game :-
 
-# while True:
+while True:
 
     # Set the game up here
     
     # pass
 
-    # while game_on:
+     while game_on:
         
         # Player 1 Turn
         
@@ -20,4 +20,4 @@ Working of game :-
             
     # if not replay():
         
-        # break
+         break
