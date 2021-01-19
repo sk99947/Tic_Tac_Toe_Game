@@ -1,5 +1,5 @@
 # Tic_Tac_Toe_Game
-A tic tac toe game to have fun !
+A Tic Tac Toe game to have fun !
 
 
 Working of game :-
